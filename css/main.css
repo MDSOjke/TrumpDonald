@@ -1,0 +1,423 @@
+@font-face {
+  font-family: 'fat-frank';
+  src: url('../fonts/FatFrank-Free.eot');
+  src: url('../fonts/FatFrank-Free.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/FatFrank-Free.woff') format('woff'),
+     url('../fonts/FatFrank-Free.ttf') format('truetype'),
+     url('../fonts/FatFrank-Free.svg#FontName') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+body{
+  background-color: #101e34;
+  overflow: hidden;
+  -webkit-background-image: radial-gradient(center 5%, transparent 0%, #1e1921 75%), url(../assets/noise-160.png);
+  background-image: radial-gradient(at center 5%, transparent 0%, #1e1921 75%), url(../assets/noise-160.png);
+  background-repeat: repeat;
+  -webkit-background-size: auto;
+  background-size: auto;
+  background-position: center;
+}
+.text{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 130px;
+  /*font-size: 7.8125vw;*/
+  line-height: 1;
+  font-family: fat-frank, arial;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  top: 65px;
+}
+.text .blue{
+  color: #46aeff
+}
+.text .red{
+  color: #ff4646;
+}
+#can{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.trumpet {
+  width: 840px;
+  height: 840px;
+  width: 77.777778vh;
+  height: 77.777778vh;
+  position: fixed;
+  top: 43%;
+  left: 50%;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.trumpet .trumpet-inner-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.trumpet .trumpet-inner-wrapper .trumpet-inner {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  width: 64.814814vh;
+  height: 64.814814vh;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  bottom: 0;
+  right: 0;
+}
+.trumpet.flipped .trumpet-inner-wrapper .trumpet-inner{
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.trump{
+  width: 1009.8px; /*1122*/
+  width: 103.888889vh;
+  /*height: 100%; */
+  height: 724.5px; /*805*/
+  height: 74.537037vh;
+  position: fixed;
+  left: 50%;
+  /*position: relative; 1 */
+  /*margin: 0 auto;*/
+  bottom: 0;
+}
+/*.trump::after{
+  display: none;
+  content: url(../assets/hair/angle_01.png) url(../assets/hair/angle_02.png) url(../assets/hair/angle_03.png) url(../assets/hair/angle_04.png) url(../assets/hair/angle_05.png) url(../assets/hair/angle_06.png) url(../assets/hair/angle_07.png) url(../assets/hair/angle_08.png) url(../assets/hair/angle_09.png) url(../assets/hair/angle_10.png) url(../assets/hair/angle_11.png) url(../assets/hair/angle_13.png) url(../assets/hair/angle_14.png) url(../assets/hair/angle_15.png) url(../assets/hair/angle_16.png) url(../assets/hair/idle.png);
+}*/
+.trump .trump-inner{
+  position: relative;
+  width:100%;
+  height: 100%;
+  margin-left: -50%;
+}
+
+/*.trump .body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background-image: url(../assets/trumps.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+.trump .body.blown{
+  background-position: 0 0;
+}*/
+
+.trump .body-cont{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: -5%;
+}
+.trump .body{
+  width: 200%;
+  height: 100%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-backface-visibility: none;
+  -moz-backface-visibility: none;
+  -ms-backface-visibility: none;
+  backface-visibility: none;
+}
+
+.trump .eyes{
+  position: absolute;
+  width: 18.8%;
+  height: 6%;
+  bottom: 68%;
+  left: 41%;
+}
+.trump .eyes .eye{
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+}
+.trump .eyes .eye.left-eye{
+}
+.trump .eyes .eye.right-eye{
+  right: -1%;
+  top: 8%;
+}
+.iris{
+  width: 90px;
+  height: 90px;
+  width: 9vh;
+  height: 9vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -45px;
+  margin-left: -45px;
+  margin-top: -4.5vh;
+  margin-left: -4.5vh;
+  background-image: url(../assets/eye.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+}
+.reflection{
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+  margin-top: -50%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  background-image: url(../assets/reflection.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: center;
+}
+
+
+/*.trump .hair{
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  bottom: 41%;
+  left: 9%;
+  width: 89.126559%;
+  height:93.167701%;
+  background-image: url(../assets/hair/idle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+.trump .hair.angle{
+  background-size: 400% 600%;
+  background-position: 0 0;
+}
+.trump .hair.angle.angle-1{
+  background-image: url(../assets/hair/angle_01.png);
+}
+.trump .hair.angle.angle-2{
+  background-image: url(../assets/hair/angle_02.png);
+}
+.trump .hair.angle.angle-3{
+  background-image: url(../assets/hair/angle_03.png);
+}
+.trump .hair.angle.angle-4{
+  background-image: url(../assets/hair/angle_04.png);
+}
+.trump .hair.angle.angle-5{
+  background-image: url(../assets/hair/angle_05.png);
+}
+.trump .hair.angle.angle-6{
+  background-image: url(../assets/hair/angle_06.png);
+}
+.trump .hair.angle.angle-7{
+  background-image: url(../assets/hair/angle_07.png);
+}
+.trump .hair.angle.angle-8{
+  background-image: url(../assets/hair/angle_08.png);
+}
+.trump .hair.angle.angle-9{
+  background-image: url(../assets/hair/angle_09.png);
+}
+.trump .hair.angle.angle-10{
+  background-image: url(../assets/hair/angle_10.png);
+}
+.trump .hair.angle.angle-11{
+  background-image: url(../assets/hair/angle_11.png);
+}
+.trump .hair.angle.angle-12{
+  background-image: url(../assets/hair/angle_12.png);
+}
+.trump .hair.angle.angle-13{
+  background-image: url(../assets/hair/angle_13.png);
+}
+.trump .hair.angle.angle-14{
+  background-image: url(../assets/hair/angle_14.png);
+}
+.trump .hair.angle.angle-15{
+  background-image: url(../assets/hair/angle_15.png);
+}
+.trump .hair.angle.angle-16{
+  background-image: url(../assets/hair/angle_16.png);
+}*/
+
+.trump .hair{
+  position: absolute;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  bottom: 41%;
+  left: 4%;
+  width: 89.126559%;
+  height:93.167701%;
+}
+.trump .hair .angle-cont, .trump .hair .idle-cont{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  -webkit-transform: translateY(-10000px) translateZ(0);
+  -ms-transform: translateY(-10000px) translateZ(0);
+  -o-transform: translateY(-10000px) translateZ(0);
+  transform: translateY(-10000px) translateZ(0);
+}
+
+.trump .hair .idle-cont .hair-sprite{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.trump .hair .angle-cont .hair-sprite{
+  position: absolute;
+  width: 400%;
+  height: 600%;
+}
+/*.trump .hair .angle-cont.angle-1{
+  background-image: url(../assets/hair/angle_01.png);
+}
+.trump .hair .angle-cont.angle-2{
+  background-image: url(../assets/hair/angle_02.png);
+}
+.trump .hair .angle-cont.angle-3{
+  background-image: url(../assets/hair/angle_03.png);
+}
+.trump .hair .angle-cont.angle-4{
+  background-image: url(../assets/hair/angle_04.png);
+}
+.trump .hair .angle-cont.angle-5{
+  background-image: url(../assets/hair/angle_05.png);
+}
+.trump .hair .angle-cont.angle-6{
+  background-image: url(../assets/hair/angle_06.png);
+}
+.trump .hair .angle-cont.angle-7{
+  background-image: url(../assets/hair/angle_07.png);
+}
+.trump .hair .angle-cont.angle-8{
+  background-image: url(../assets/hair/angle_08.png);
+}
+.trump .hair .angle-cont.angle-9{
+  background-image: url(../assets/hair/angle_09.png);
+}
+.trump .hair .angle-cont.angle-10{
+  background-image: url(../assets/hair/angle_10.png);
+}
+.trump .hair .angle-cont.angle-11{
+  background-image: url(../assets/hair/angle_11.png);
+}
+.trump .hair .angle-cont.angle-12{
+  background-image: url(../assets/hair/angle_12.png);
+}
+.trump .hair .angle-cont.angle-13{
+  background-image: url(../assets/hair/angle_13.png);
+}
+.trump .hair .angle-cont.angle-14{
+  background-image: url(../assets/hair/angle_14.png);
+}
+.trump .hair .angle-cont.angle-15{
+  background-image: url(../assets/hair/angle_15.png);
+}
+.trump .hair .angle-cont.angle-16{
+  background-image: url(../assets/hair/angle_16.png);
+}*/
+
+
+.socials-container{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+}
+
+.socials-container .social-item{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  -webkit-background-size: 120px 60px;
+  background-size: 120px 60px;
+  background-position: 100% 0;
+}
+
+.socials-container .social-item:hover{
+  background-position: 0 0;
+}
+
+.socials-container .social-item:not(:first-child){
+  margin-left: -3px;
+}
+
+.facebook{
+  background-image: url(../assets/facebook.png);
+}
+
+.twitter{
+  background-image: url(../assets/twitter.png);
+}
+
+.socials-container .social-item .social-link{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/*
+@media screen and (min-width: 1921px){
+  .text{
+    font-size: 150px;
+  }
+}*/
+
+@media screen and (min-width: 1530px){
+  .text{
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .text{
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .text{
+    text-align: left;
+    line-height: 0.8;
+    padding-left: 30px;
+  }
+  .text span {
+    display: block;
+    margin-left: 35px;
+  }
+}
