@@ -60,6 +60,7 @@ body{
   -ms-transform-origin: 0 0;
   -o-transform-origin: 0 0;
   transform-origin: 0 0;
+  visibility: hidden;
 }
 .trumpet .trumpet-inner-wrapper {
   width: 100%;
@@ -97,6 +98,7 @@ body{
   /*position: relative; 1 */
   /*margin: 0 auto;*/
   bottom: 0;
+  visibility: hidden;
 }
 /*.trump::after{
   display: none;
@@ -300,7 +302,7 @@ body{
 
 .trump .hair .angle-cont .hair-sprite{
   position: absolute;
-  width: 400%;
+  width: 200%;
   height: 600%;
 }
 /*.trump .hair .angle-cont.angle-1{
@@ -390,6 +392,49 @@ body{
   display: block;
   width: 100%;
   height: 100%;
+}
+
+/*Pace*/
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  -webkit-transform: translate3d(0, -50px, 0);
+  -ms-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -ms-transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+}
+
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+
+  pointer-events: none;
 }
 /*
 @media screen and (min-width: 1921px){

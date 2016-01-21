@@ -295,17 +295,58 @@ var hair = $('.hair .angle-cont .hair-sprite'),
 //     ease: SteppedEase.config(3)
 //   })
 
+    // tlUp.to(hair, 0.5/12*1,
+    //       {
+    //         x: '0%',
+    //         y: '0%',
+    //         ease: SteppedEase.config(1)
+    //       })
+    //     .to(hair, 0.5/12*3,
+    //       {
+    //         x: '-75%',
+    //         y: '0%',
+    //         ease: SteppedEase.config(3)
+    //       })
+    //     .to(hair, 0.5/12*1,
+    //       {
+    //         x: '0%',
+    //         y: -100/6*1+'%',
+    //         ease: SteppedEase.config(1)
+    //       }
+    //     )
+    //     .to(hair, 0.5/12*3,
+    //       {
+    //         x: '-75%',
+    //         y: -100/6*1+'%',
+    //         ease: SteppedEase.config(3)
+    //       }
+    //     )
+    //     .to(hair, 0.5/12*1,
+    //       {
+    //         x: '0%',
+    //         y: -100/6*2+'%',
+    //         ease: SteppedEase.config(1)
+    //       }
+    //     )
+    //     .to(hair, 0.5/12*3,
+    //       {
+    //         x: '-75%',
+    //         y: -100/6*2+'%',
+    //         ease: SteppedEase.config(3)
+    //       }
+    //     )
+
     tlUp.to(hair, 0.5/12*1,
           {
             x: '0%',
             y: '0%',
             ease: SteppedEase.config(1)
           })
-        .to(hair, 0.5/12*3,
+        .to(hair, 0.5/12*1,
           {
-            x: '-75%',
+            x: '50%',
             y: '0%',
-            ease: SteppedEase.config(3)
+            ease: SteppedEase.config(1)
           })
         .to(hair, 0.5/12*1,
           {
@@ -314,11 +355,11 @@ var hair = $('.hair .angle-cont .hair-sprite'),
             ease: SteppedEase.config(1)
           }
         )
-        .to(hair, 0.5/12*3,
+        .to(hair, 0.5/12*1,
           {
-            x: '-75%',
+            x: '-50%',
             y: -100/6*1+'%',
-            ease: SteppedEase.config(3)
+            ease: SteppedEase.config(1)
           }
         )
         .to(hair, 0.5/12*1,
@@ -328,13 +369,14 @@ var hair = $('.hair .angle-cont .hair-sprite'),
             ease: SteppedEase.config(1)
           }
         )
-        .to(hair, 0.5/12*3,
+        .to(hair, 0.5/12*1,
           {
-            x: '-75%',
+            x: '-50%',
             y: -100/6*2+'%',
-            ease: SteppedEase.config(3)
+            ease: SteppedEase.config(1)
           }
         )
+
 
     // tlBlow.to(hair, 0.5/12*1,
     //     {
@@ -379,8 +421,27 @@ var hair = $('.hair .angle-cont .hair-sprite'),
     //     }
     //   )
 
+// for(var seq = 0; seq < 50; seq++){
+//   var x = (Math.random() < 0.5) ? ['0%','-75%'] : ['-75%','0%'],
+//       y = -Math.floor(Math.random()*3+3)*100/6;
+//   tlBlow.to(hair, 0.5/12*1,
+//       {
+//         x: x[0],
+//         y: y+'%',
+//         ease: SteppedEase.config(1)
+//       }
+//     )
+//     .to(hair, 0.5/12*3,
+//       {
+//         x: x[1],
+//         y: y+'%',
+//         ease: SteppedEase.config(3)
+//       }
+//     )
+// }
+
 for(var seq = 0; seq < 50; seq++){
-  var x = (Math.random() < 0.5) ? ['0%','-75%'] : ['-75%','0%'],
+  var x = (Math.random() < 0.5) ? ['0%','-50%'] : ['-50%','0%'],
       y = -Math.floor(Math.random()*3+3)*100/6;
   tlBlow.to(hair, 0.5/12*1,
       {
@@ -389,11 +450,11 @@ for(var seq = 0; seq < 50; seq++){
         ease: SteppedEase.config(1)
       }
     )
-    .to(hair, 0.5/12*3,
+    .to(hair, 0.5/12*1,
       {
         x: x[1],
         y: y+'%',
-        ease: SteppedEase.config(3)
+        ease: SteppedEase.config(1)
       }
     )
 }
@@ -521,6 +582,12 @@ $(window).load(function () {
   //TweenMax.to($('.hair .angle-cont'), 0, {y: -10000});
   //console.log('up')
 })
+
+Pace.on("done", function(){
+    $(".trump").css('visibility','visible');
+    $(".trumpet").css('visibility','visible');
+});
+
 
 init();
 
