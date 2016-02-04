@@ -1,0 +1,11 @@
+User-agent: Twitterbot
+Disallow:
+
+User-agent: *
+Disallow: /.gitattributes
+Disallow: /.gitignore
+Disallow: /js/check-swapper.js
+Disallow: /js/pace.js
+Disallow: /assets/hair/
+Disallow: /assets/hair_0.5/
+Disallow: /assets/hair-safari/
