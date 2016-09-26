@@ -40,12 +40,10 @@ TRUMP.eyes = (function(){
     eyeMove(leftEye, irisPos(leftEye));
     eyeMove(rightEye, irisPos(leftEye))
   }
-
   function eyesInit() {
     leftEye = eyeObjSetup('.left-eye');
     rightEye = eyeObjSetup('.right-eye');
   }
-
   function criosFix(){
     var size = TRUMP.main.props.pageHeight*9/100;
     $('.iris').width(size);
@@ -54,16 +52,9 @@ TRUMP.eyes = (function(){
       'margin-top': -size/2+'px',
       'margin-left': -size/2+'px'
     });
-    // alert('eyes');
   }
-
-  if(!TRUMP.main.crios){
     criosFix();
-  // }
-  // if(!TRUMP.main.crios){
     eyesInit();
-  }
-
   return{
     crF: criosFix,
     eyesRepos: bothEyesMove,

@@ -34,14 +34,9 @@ TRUMP.trumpet = (function(){
   }
 
   function debugFlick() {
-    var tWidth = props.body.width();
+    var tWidth = (TRUMP.main.props.screenSize > 768) ? TRUMP.main.props.pageHeight*103.888889/100 : TRUMP.main.props.pageHeight*88.305555/100;
     props.body.removeAttr('style');
-    // if(TRUMP.main.crios){
-      TweenLite.to(props.body, 0, {width: tWidth, y:0 ,left: Math.round(props.body.offset().left/2)*2});
-    // } else {
-      // TweenLite.to(props.body, 0, {y:0 ,left: Math.round(props.body.offset().left/2)*2});
-    // }
-
+    TweenLite.to(props.body, 0, {width: tWidth, y:0 ,left: Math.round(props.body.offset().left/2)*2});
   }
 
   function repos(){
@@ -71,15 +66,10 @@ TRUMP.trumpet = (function(){
 
   function criosFix(){
     $('.trumpet').width(TRUMP.main.props.pageHeight*((TRUMP.main.props.screenSize > 767) ? 77.777778 : 74.074074)/100);
-    // alert('trumpet')
   }
 
-  if(!TRUMP.main.crios){
     criosFix();
-  // }
-  // if(!TRUMP.main.crios){
     trumpetInit();
-  }
 
   return {
     crF: criosFix,

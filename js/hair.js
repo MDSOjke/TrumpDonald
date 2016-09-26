@@ -42,7 +42,6 @@ TRUMP.hair = (function() {
           console.log('imgDrawn ='+TRUMP.main.flags.imagesDrawn);
         }
         TRUMP.main.flags.loadCounter++;
-        // TRUMP.loader.uP();
         if(TRUMP.main.flags.loadCounter === 16){
           TRUMP.main.flags.imagesLoaded = true;
           console.log('imgLoaded ='+TRUMP.main.flags.imagesLoaded);
@@ -113,15 +112,12 @@ TRUMP.hair = (function() {
         } else {
           gtx.drawImage(hairImgPool[hairAngle-1],0,0,hDims[0],hDims[1]);
         }
-        // if(mouseDown || sequenceStarted || backSequenceStarted){
-        //
-        // }
       }
   }
 
   function hairAnimInit() {
-    var xMax = /*(screenSize > 768)? '-75%' : */'-50%',
-        stepsNum = /*(screenSize > 768)? 3 :*/ 1;
+    var xMax = '-50%',
+        stepsNum = 1;
 
     tlUp.to(hairCanvas, 0.5/12*1,
         {
@@ -207,19 +203,11 @@ TRUMP.hair = (function() {
   function criosFix(){
     var proportion = (TRUMP.main.props.screenSize > 768) ? 103.888889 : 88.305555,
         size = TRUMP.main.props.pageHeight*proportion/100;
-
     $('.trump').width(size+'px');
-    // alert('hair');
   }
-
-  if(!TRUMP.main.crios){
     criosFix();
-  // }
-  // if(!TRUMP.main.crios){
     hairImagesInit();
     hairAnimInit();
-  }
-
   return {
     crF: criosFix,
     hACH: hairAngleChangeHandler,
@@ -230,7 +218,4 @@ TRUMP.hair = (function() {
     sS: sequenceStart,
     sE: sequenceEnd
   }
-
-
-
 })();

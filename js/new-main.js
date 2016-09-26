@@ -7,7 +7,6 @@ TRUMP.main = (function(){
         pageHeight : window.innerHeight,
         pageWidth : window.innerWidth,
         screenSize : $('body').width()
-        // tP: []
       },
       flags = {
         mouseDown : false,
@@ -33,13 +32,13 @@ TRUMP.main = (function(){
       },
       options = {
         fullFramesDesktop: false,
-        fullFramesMobile: false
+        fullFramesMobile: false,
+        linksPool: [
+          'https://www.facebook.com/animalstockholm',
+          'https://www.instagram.com/animalstockholm',
+          'https://twitter.com/AnimalStockholm'
+        ]
       }
-
-  // if(tests.touchTest){
-  //   pageHeight = window.screen.availHeight;
-  //   pageWidth = window.screen.availWidth;
-  // }
 
   /*Assign body classes*/
 
@@ -49,17 +48,21 @@ TRUMP.main = (function(){
     (tests.crios)?$('body').addClass('crios'):0;
   }
 
+  function linksSwap() {
+    var rndVal = Math.floor(Math.random()*3);
+    $('.counter-ref a').attr('href',options.linksPool[rndVal]);
+  }
+
   /*Initialize*/
 
   function initialize(){
     bodyClasses();
+    linksSwap()
   }
 
   function criosFix(){
     var size = (clientProps.pageWidth > clientProps.pageHeight) ? clientProps.pageWidth : clientProps.pageHeight;
     $('.gradient-bg').height(size*2).width(size*2);
-    // alert('main')
-    // alert(clientProps.pageHeight+'/'+clientProps.pageWidth+'/'+clientProps.screenSize)
   }
 
   if(tests.touchTest){
@@ -67,13 +70,8 @@ TRUMP.main = (function(){
   } else {
     eventList = ['mousedown','mousemove','mouseup']
   }
-
-  // if(!tests.crios){
     criosFix();
-  // }
-  // if(!tests.crios){
     initialize();
-  // }
 
   return {
     crF: criosFix,
@@ -83,6 +81,8 @@ TRUMP.main = (function(){
     flags: flags,
     props: clientProps,
     events: eventList,
-    sC: flags.confettiCounter
+    sC: flags.confettiCounter,
+    linksP: options.linksPool,
+    linkS: linksSwap
   }
 })();

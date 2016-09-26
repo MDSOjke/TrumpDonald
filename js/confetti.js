@@ -32,20 +32,6 @@ var Confetti = new function() {
     }
     setTimeout(d, 10)
   }
-  //
-  // function d() {
-  //   g.clearRect(0, 0, k, j);
-  //   var e = (new Date).getTime(),
-  //     i = Math.min((e - h) / 1e3, .016);
-  //   for (h = e, x = 0; x < l.length; x++) {
-  //     var n = l[x];
-  //     if (n.vx > 0 ? n.vx -= i / 20 * n.vx * n.vx : n.vx += i / 20 * n.vx * n.vx, n.vy > 0 ? n.vy -= i / 20 * n.vy * n.vy : n.vy += i / 20 * n.vy * n.vy, n.vy += 4 * i, n.vx += a() * i * 20, n.vy += a() * i * 16, n.x += n.vx, n.y += n.vy, n.y > j + 50 || n.x < -50 || n > j + 50) {
-  //       if (l.splice(x, 1), !l.length) return m = !1, void f.remove()
-  //     } else n.rotation = (n.rotation + .2 + Math.PI) % Math.PI, g.fillStyle = n.color, n.rectangular ? c(n.x, n.y, n.size, n.size * Math.sin(n.rotation), n.rotationZ) : b(n.x, n.y, n.size, n.size * Math.sin(n.rotation), n.rotationZ)
-  //   }
-  //   setTimeout(d, 10)
-  // }
-
   function e() {
     m || (this.show(p, !1, !0), o--, 0 === o && clearInterval(i))
   }
